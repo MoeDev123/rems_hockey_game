@@ -2,14 +2,23 @@ let xPos = 100
 let yPos = 100
 let xPos2 = 300
 let yPos2 = 400
+let xPosBall = 250;
+let yPosBall = 250;
+let xSpeedBall;
+let ySpeedBall; 
+let xDirectionBall = 1;
+let yDirectionBall = 1;
+
+
 function setup() {
     createCanvas(500,500);
     background(0);
+
+    xSpeedBall = random(-5,5);
+    ySpeedBall = random(-5,5);
+
 }
 
-function mousa(){
-    
-}
 
 function draw() { 
    background(0);
@@ -47,6 +56,29 @@ function draw() {
         if (keyIsDown(83) && yPos < 400 ) { //down
         yPos += 4;
 }
+
+fill(0, 255, 0);
+   ellipse(xPosBall, yPosBall, 50, 50);
+
+   xPosBall += xSpeedBall *xDirectionBall;
+   yPosBall += ySpeedBall * yDirectionBall;
+
+    if (xPosBall < 25 || xPosBall > 475) {
+        xDirectionBall *= -1;
+
+    }
+
+    if (yPosBall < 25 || yPosBall > 475) {
+        yDirectionBall *= -1
+
+    }
+
+
+
+
+
+
+
 
 
 
