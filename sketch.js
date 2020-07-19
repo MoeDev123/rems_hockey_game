@@ -7,6 +7,10 @@ function setup() {
     background(0);
 }
 
+function mousa(){
+    
+}
+
 function draw() { 
    background(0);
    fill(0,0,255);
